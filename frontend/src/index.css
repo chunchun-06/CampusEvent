@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-white text-gray-800 font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Lora', serif;
+  }
+}
+
+@layer utilities {
+  .font-serif-italic {
+    font-family: 'Lora', serif;
+    font-style: italic;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-cyan-100 hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-cyan-500 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-cyan-600 transition-all duration-200 shadow-sm hover:shadow-cyan-200 hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-cyan-500 text-cyan-600 font-semibold px-5 py-2.5 rounded-xl hover:bg-cyan-50 transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-red-600 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200 bg-gray-50;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-6 border border-gray-100;
+  }
+
+  .badge-pending {
+    @apply bg-amber-100 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+
+  .badge-approved {
+    @apply bg-emerald-100 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+
+  .badge-rejected {
+    @apply bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+}
